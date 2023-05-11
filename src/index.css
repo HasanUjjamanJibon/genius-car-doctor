@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+.emoji-404 {
+  position: relative;
+  animation: mymove 2.5s infinite;
+}
+
+@keyframes mymove {
+  33% {
+    top: 0px;
+  }
+  66% {
+    top: 20px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.text-center-capitalize {
+  @apply text-center capitalize;
+}
+
+.grid-container-3-2-1 {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+}
+.grid-container-2-1 {
+  @apply grid grid-cols-1 md:grid-cols-2;
+}
+.swiper-container {
+  max-width: 768px;
+}
+
+@media screen and (min-width: 640px) {
+  .swiper-container {
+    width: 640px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-container {
+    width: 768px;
+  }
+}
+@layer utilities {
+  .clip-path-section {
+    clip-path: polygon(5% 5%, 93% 5%, 100% 100%, 0% 100%);
+  }
+}
+@layer utilities {
+  .background-gradient {
+    height: 300px;
+    width: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.785),
+        rgba(255, 255, 255, 0)
+      ),
+      url("/public/images/checkout/checkout.png");
+  }
+}
